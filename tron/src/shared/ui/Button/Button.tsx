@@ -36,8 +36,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   icon: "rounded-full card  p-0 text-foreground hover:bg-primary text-accent",
   banner:
     "text-accent font-medium shadow-lg hover:shadow-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 group relative overflow-hidden",
-  glass:
-    "card  text-accent hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.2)] transition-all duration-200 border border-[rgba(255,255,255,0.1)]",
+  glass: "card glass-hover  text-accent  transition-all duration-200 ",
 };
 
 const iconSizeBySize: Record<ButtonSize, string> = {

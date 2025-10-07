@@ -10,6 +10,8 @@ import { TicketCircleIcon } from "@/shared/assets/icons/TicketCircleIcon";
 import { VkIcon } from "@/shared/assets/icons/VkIcon";
 import { CopyIcon } from "@/shared/assets/icons/CopyIcon";
 import { PlusIcon } from "@/shared/assets/icons/PlusIcon";
+import { CloseIcon } from "@/shared/assets/icons/Close";
+import { MenuIcon } from "@/shared/assets/icons/Menu";
 export {
   DiscountCircleIcon,
   ArrowDownIcon,
@@ -20,4 +22,6 @@ export {
   VkIcon,
   CopyIcon,
   PlusIcon,
+  CloseIcon,
+  MenuIcon,
 };

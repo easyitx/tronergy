@@ -7,6 +7,8 @@ export type SimpleIconName =
   | "telegram"
   | "vk-icon"
   | "plus"
-  | "ticket-circle";
+  | "ticket-circle"
+  | "close"
+  | "menu";
 
 export type IconName = SimpleIconName;

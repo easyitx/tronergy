@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import "tailwind-animate";
 :root {
 }
 
@@ -33,7 +33,7 @@
     --text-base: clamp(13px, 2vw, 16px);
     --text-lg: clamp(16px, 2.5vw, 22px);
     --text-xl: clamp(28px, 5vw, 40px);
-
+    --text-2xl: clamp(32px, 6vw, 48px);
     --container: 1420px;
   }
 }
@@ -142,6 +142,17 @@ html::before {
   .text-xl {
     font-size: var(--text-xl);
   }
+  .text-2xl {
+    font-size: var(--text-2xl);
+  }
+  /* Скрыть скроллбар, но оставить скролл */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
 }
 
 @layer components {
@@ -151,8 +162,8 @@ html::before {
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--foreground);
     @apply rounded-3xl;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
-      0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0.76px 16.81px rgba(255, 255, 255, 0.1),
+      inset 0px -4px 5.3px rgba(255, 255, 255, 0.05);
   }
 
   .app-container {
@@ -161,13 +172,17 @@ html::before {
     margin: 0 auto;
   }
 
-  .glass {
-    @apply hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.2)] border-[rgba(255,255,255,0.1)];
+  .glass-hover {
+    @apply hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.2)];
   }
 }
 
 @layer utilities {
   /* Accordion animations */
+  .tag-trapezoid {
+    clip-path: polygon(0 0, 100% 12%, 100% 88%, 0 100%);
+  }
+
   @keyframes accordion-down {
     from {
       height: 0;
