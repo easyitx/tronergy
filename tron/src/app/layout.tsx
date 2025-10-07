@@ -12,9 +12,33 @@ import { FAQ } from "@/widgets/FAQ/FAQ";
 import { WhyChooseUs } from "@/widgets/WhyChooseUs/WhyChooseUs";
 import { AppProvider } from "./providers";
 
-export const metadata: Metadata = {
-  title: "TronEnergy",
-  description: "TronEnergy",
+export const metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://tronergy.ru"
+  ),
+  title: {
+    default: "TRONERGY — Пополнение энергии TRON",
+    template: "%s — TRONERGY",
+  },
+  description:
+    "Быстрое пополнение энергии TRON. Низкая комиссия, гибкие условия, поддержка 24/7.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    title: "TRONERGY — пополни энергию TRON",
+    description: "Быстро, удобно, безопасно.",
+    url: "/",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "TRONERGY" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TRONERGY",
+    description: "Быстрое пополнение энергии TRON",
+    images: ["/og.png"],
+  },
+  viewport: { width: "device-width", initialScale: 1, maximumScale: 5 },
+  themeColor: "#0b0b0b",
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -23,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={cn("pt-6 m-0", interTight.variable)}>
         <AppProvider>
           <Header className="app-container h-15" />
