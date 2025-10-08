@@ -21,13 +21,17 @@ export default function WalletItem({
         className
       )}
     >
-      <Image
-        src={src}
-        alt={alt}
-        width={34}
-        height={34}
-        className="object-contain h-full w-full "
-      />
+      {src ? (
+        <Image
+          src={src}
+          alt={alt}
+          width={34}
+          height={34}
+          className="object-contain h-full w-full "
+        />
+      ) : (
+        <div className="h-full w-full  rounded-3xl"></div>
+      )}
     </div>
   );
 }

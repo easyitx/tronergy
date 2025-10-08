@@ -3,7 +3,7 @@ import { cn } from "@/shared/lib/utils";
 import WalletItem from "./WalletItem";
 
 type WalletListProps = {
-  items: Array<{ src: string; alt?: string }>; // пока только src
+  items: Array<{ src: string; alt?: string }>;
   className?: string;
 };
 
@@ -11,7 +11,9 @@ export default function WalletList({ items, className }: WalletListProps) {
   return (
     <div
       className={cn(
-        "w-full h-full flex flex-wrap gap-2 md:gap-4 justify-center ",
+        "flex flex-wrap gap-4",
+        "[&>*]:basis-[calc((100%-(3-1)*1rem)/3)]",
+        "md:[&>*]:basis-[calc((100%-(4-1)*1rem)/4)]",
         className
       )}
     >

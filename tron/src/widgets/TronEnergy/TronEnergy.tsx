@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Title from "../Title/Title";
 import { Typography } from "@/shared/ui/Typography";
 import { Spacing } from "@/shared/ui/Spacing";
@@ -17,13 +18,20 @@ const energyRentalStructuredData = {
     },
     "areaServed": "Россия и СНГ",
     "serviceType": "Криптовалютные услуги"
-};
+}
 
 interface TronEnergyProps {
     className?: string;
 }
 
 const TronEnergy = ({ className }: TronEnergyProps) => {
+    const TRX_PRICE = 2.5;
+    const TRX_DISCOUNT = 14;
+    const [transationsCount, setTransationsCount] = useState(1);
+    const [isConfirmed, setIsConfirmed] = useState(false);
+    const totalPrice = TRX_PRICE * transationsCount;
+    const totalDiscount = TRX_DISCOUNT * transationsCount;
+
     return (
         <section
             className={className}
@@ -68,8 +76,16 @@ const TronEnergy = ({ className }: TronEnergyProps) => {
                 itemScope
                 itemType="https://schema.org/OfferCatalog"
             >
-                <Calculator className="w-full h-full" />
-                <Adress className="w-full h-full" />
+                <Calculator
+                    totalPrice={totalPrice}
+                    totalDiscount={totalDiscount}
+                    isConfirmed={isConfirmed}
+                    transationsCount={transationsCount}
+                    setTransationsCount={setTransationsCount}
+                    setIsConfirmed={setIsConfirmed}
+                    className="w-full h-full"
+                />
+                <Adress totalPrice={totalPrice} className="w-full h-full" />
                 <Wallet className="w-full h-full md:col-span-2 lg:col-span-1" />
             </div>
         </section>

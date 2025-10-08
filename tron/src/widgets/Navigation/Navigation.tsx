@@ -6,8 +6,8 @@ import { cn } from "@/shared/lib/utils";
 
 export const navigationConfig = [
   { label: "Главная", href: "#replenishment" },
-  { label: "О нас", href: "#faq" },
-  { label: "Контакты", href: "#guide" },
+  // { label: "О нас", href: "#faq" },
+  // { label: "Контакты", href: "#guide" },
 ] as const;
 
 const scrollToSection = (href: string) => {

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import React from "react";
 import Header from "@/widgets/Header/Header";
 import { cn } from "@/shared/lib/utils";
 import { interTight } from "@/shared/lib/fonts";
@@ -9,8 +10,7 @@ import TronEnergy from "@/widgets/TronEnergy/TronEnergy";
 import { FAQ } from "@/widgets/FAQ/FAQ";
 import { WhyChooseUs } from "@/widgets/WhyChooseUs/WhyChooseUs";
 import { AppProvider } from "./providers";
-import Image from "next/image";
-import bgFilterSvg from "@/shared/assets/images/background-filter.svg";
+import BgFilter from "@/widgets/BgFilter/BgFilter";
 
 const keywords = [
     "купить энергию TRON",
@@ -164,7 +164,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </head>
 
         <body className={cn("pt-6 m-0", interTight.variable)}>
-        {/* Добавляем структурированные данные для сайта и организации */}
+
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{__html: JSON.stringify(websiteStructuredData)}}
@@ -174,22 +174,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             dangerouslySetInnerHTML={{__html: JSON.stringify(organizationStructuredData)}}
         />
 
-        {/* Блок с фоном - улучшенная доступность */}
-        <div
-            className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[65vh]"
-            aria-hidden="true"
-            role="presentation"
-        >
-            <Image
-                src={bgFilterSvg}
-                alt=""
-                fill
-                className="object-cover"
-                priority // Добавляем приоритетную загрузку для LCP
-            />
-        </div>
+        <BgFilter />
 
-        {/* Основной контент с правильной семантикой */}
         <AppProvider>
             <Header className="app-container h-15"/>
             <Spacing size="4xl" direction="vertical"/>
@@ -205,31 +191,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Spacing size="4xl" direction="vertical"/>
             <Footer/>
         </AppProvider>
-
-        {/* Schema.org для BreadcrumbList (можно динамически генерировать) */}
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Главная",
-                            "item": "https://tronergy.pro"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "Аренда энергии TRON",
-                            "item": "https://tronergy.pro/tron-energy"
-                        }
-                    ]
-                })
-            }}
-        />
         </body>
         </html>
     );

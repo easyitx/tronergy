@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Button from "@/shared/ui/Button/Button";
+
 import { Icon } from "@/shared/ui/Icon/Icon";
 import { cn } from "@/shared/lib/utils";
 import { Typography } from "../Typography";
@@ -17,9 +17,9 @@ type CopyProps = {
 export default function Copy({
   value,
   className,
-  size = "md",
+
   onCopied,
-  shape = "square",
+
   iconSize = 28,
 }: CopyProps) {
   const [copied, setCopied] = useState(false);
@@ -32,7 +32,9 @@ export default function Copy({
       onCopied?.();
       if (timerRef.current) window.clearTimeout(timerRef.current);
       timerRef.current = window.setTimeout(() => setCopied(false), 2000);
-    } catch (_) {}
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {

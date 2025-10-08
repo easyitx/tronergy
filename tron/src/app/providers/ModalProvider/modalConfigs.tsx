@@ -15,13 +15,11 @@ export const ConfirmationModal: React.FC<{
   modalId?: string;
   onClose?: () => void;
 }> = ({
-  title = "Подтверждение",
   message,
   onConfirm,
   onCancel,
   confirmText = "Подтвердить",
   cancelText = "Отмена",
-  variant = "default",
   onClose,
 }) => {
   const handleConfirm = () => {
@@ -56,7 +54,7 @@ export const NotificationModal: React.FC<{
   onClose?: () => void;
 }> = ({ title, message, type = "info", onClose }) => {
   const icons = {
-    success: <Icon name="tick-circle" />,
+    success: <Icon name="ticket-circle" />,
     error: <Icon name="close" />,
     warning: "⚠️",
     info: "ℹ️",
@@ -87,7 +85,7 @@ export const NotificationModal: React.FC<{
   );
 };
 
-export const modalConfigs: Record<string, Omit<ModalConfig, "id">> = {
+export const modalConfigs: Record<string, Omit<ModalConfig<any>, "id">> = {
   confirmDelete: {
     component: ConfirmationModal,
     size: "sm",

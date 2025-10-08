@@ -5,11 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a9d61d-6823-43e8-be82-2afa425c7398" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/tron/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/tron/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tron/public/Logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/tron/public/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tron/src/shared/assets/images/wallet/wallet-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tron/src/shared/assets/images/wallet/wallet-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tron/src/shared/assets/images/wallet/wallet-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tron/src/shared/assets/images/wallet/wallet-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tron/src/shared/assets/images/wallet/wallet-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tron/src/shared/assets/images/wallet/wallet-6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tron/src/shared/assets/images/wallet/wallet-7.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tron/src/shared/assets/images/wallet/wallet-8.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tron/src/widgets/BgFilter/BgFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tron/eslint.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tron/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tron/src/widgets/Logo/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/Logo/Logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/app/providers/ModalProvider/ModalProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/app/providers/ModalProvider/ModalProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/app/providers/ModalProvider/modalConfigs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/app/providers/ModalProvider/modalConfigs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/app/providers/ModalProvider/useModalActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/app/providers/ModalProvider/useModalActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/ArrowDownIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/ArrowDownIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/ArrowUpIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/ArrowUpIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/Close.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/Close.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/CopyIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/CopyIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/DiscountCircleIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/DiscountCircleIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/FlashIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/FlashIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/HeadphoneIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/HeadphoneIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/PlusIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/PlusIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/TelegramIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/TelegramIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/TicketCircleIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/TicketCircleIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/TradeIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/TradeIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/assets/icons/VkIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/assets/icons/VkIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/ui/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/ui/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/ui/Copy/Copy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/ui/Copy/Copy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/ui/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/ui/Icon/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/shared/ui/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/shared/ui/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/widgets/Adress/Adress.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/Adress/Adress.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/widgets/Calculator/Calculator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/Calculator/Calculator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/widgets/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/widgets/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tron/src/widgets/TronEnergy/TronEnergy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/TronEnergy/TronEnergy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/widgets/Wallet/Wallet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/Wallet/Wallet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/widgets/Wallet/WalletItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/Wallet/WalletItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/widgets/Wallet/WalletList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/Wallet/WalletList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tron/src/widgets/WhyChooseUs/WhyChooseUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tron/src/widgets/WhyChooseUs/WhyChooseUs.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/home/x/X/tronergy/tron/public",
     "node.js.detected.package.eslint": "true",
@@ -67,7 +104,7 @@
       <updated>1759749699354</updated>
       <workItem from="1759749700647" duration="7000" />
       <workItem from="1759897503050" duration="1199000" />
-      <workItem from="1759901274052" duration="3717000" />
+      <workItem from="1759901274052" duration="4960000" />
     </task>
     <servers />
   </component>

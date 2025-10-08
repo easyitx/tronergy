@@ -4,10 +4,7 @@ interface TradeIconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
 }
 
-export const TradeIcon: React.FC<TradeIconProps> = ({
-  size = 24,
-  ...props
-}) => {
+export const TradeIcon: React.FC<TradeIconProps> = ({ ...props }) => {
   return (
     <svg
       width="30"

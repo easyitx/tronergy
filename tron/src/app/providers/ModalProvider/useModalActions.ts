@@ -6,7 +6,7 @@ export const useModalActions = () => {
 
   const openModalByConfig = (
     configKey: string,
-    props?: Record<string, any>
+    props?: Record<string, unknown>
   ) => {
     const config = modalConfigs[configKey];
     if (!config) {
@@ -16,7 +16,7 @@ export const useModalActions = () => {
 
     return openModal({
       ...config,
-      props: { ...config.props, ...props },
+      props: { ...(config.props as Record<string, unknown>), ...(props || {}) },
     });
   };
 

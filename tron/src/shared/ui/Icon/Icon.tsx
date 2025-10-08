@@ -23,7 +23,8 @@ interface IconProps
   size?: number;
 }
 
-const iconComponents: Record<IconName, unknown> = {
+type IconComponentType = React.FC<React.SVGProps<SVGSVGElement>>;
+const iconComponents: Record<IconName, IconComponentType> = {
   "discount-circle": DiscountCircleIcon,
   menu: MenuIcon,
   "arrow-down": ArrowDownIcon,
@@ -46,22 +47,18 @@ export const Icon: React.FC<IconProps> = ({
   className,
   ...props
 }) => {
-  const IconComponent = iconComponents[
-    name as keyof typeof iconComponents
-  ] as any;
+  const IconComponent = iconComponents[name as keyof typeof iconComponents];
 
   if (!IconComponent) {
     return <span>Icon not found: {name}</span>;
   }
 
-  if (typeof IconComponent === "function") {
-    return (
-      <IconComponent
-        width={size}
-        height={size}
-        className={cn("inline-flex shrink-0 ", className)}
-        {...props}
-      />
-    );
-  }
+  return (
+    <IconComponent
+      width={size}
+      height={size}
+      className={cn("inline-flex shrink-0 ", className)}
+      {...props}
+    />
+  );
 };
