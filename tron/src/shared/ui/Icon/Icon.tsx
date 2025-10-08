@@ -13,6 +13,8 @@ import {
   TicketCircleIcon,
   CloseIcon,
   MenuIcon,
+  TradeIcon,
+  HeadphoneIcon,
 } from "./model/Icons";
 
 interface IconProps
@@ -26,9 +28,9 @@ const iconComponents: Record<IconName, unknown> = {
   menu: MenuIcon,
   "arrow-down": ArrowDownIcon,
   "arrow-up": ArrowUpIcon,
-
+  trade: TradeIcon,
   flash: FlashIcon,
-
+  headphone: HeadphoneIcon,
   telegram: TelegramIcon,
 
   "vk-icon": VkIcon,

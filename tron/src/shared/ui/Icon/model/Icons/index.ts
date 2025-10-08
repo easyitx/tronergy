@@ -12,11 +12,14 @@ import { CopyIcon } from "@/shared/assets/icons/CopyIcon";
 import { PlusIcon } from "@/shared/assets/icons/PlusIcon";
 import { CloseIcon } from "@/shared/assets/icons/Close";
 import { MenuIcon } from "@/shared/assets/icons/Menu";
+import { TradeIcon } from "@/shared/assets/icons/TradeIcon";
+import { HeadphoneIcon } from "@/shared/assets/icons/HeadphoneIcon";
 export {
   DiscountCircleIcon,
   ArrowDownIcon,
   ArrowUpIcon,
   FlashIcon,
+  HeadphoneIcon,
   TelegramIcon,
   TicketCircleIcon,
   VkIcon,
@@ -24,4 +27,5 @@ export {
   PlusIcon,
   CloseIcon,
   MenuIcon,
+  TradeIcon,
 };

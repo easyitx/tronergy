@@ -25,12 +25,12 @@ const defaultItems: WhyChooseUsItem[] = [
   {
     title: "Гибкость",
     subtitle: "Эксклюзивные условия для наших клиентов",
-    icon: { name: "ticket-circle" },
+    icon: { name: "trade" },
   },
   {
     title: "Поддержка 24/7",
     subtitle: "Поможем решить любой вопрос оперативно",
-    icon: { name: "telegram" },
+    icon: { name: "headphone" },
   },
 ];
 

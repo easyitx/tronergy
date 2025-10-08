@@ -9,6 +9,8 @@ export type SimpleIconName =
   | "plus"
   | "ticket-circle"
   | "close"
-  | "menu";
+  | "menu"
+  | "trade"
+  | "headphone";
 
 export type IconName = SimpleIconName;
