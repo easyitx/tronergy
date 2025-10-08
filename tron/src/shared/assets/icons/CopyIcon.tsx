@@ -4,7 +4,7 @@ interface CopyIconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
 }
 
-export const CopyIcon: React.FC<CopyIconProps> = ({ size = 24, ...props }) => {
+export const CopyIcon: React.FC<CopyIconProps> = ({ ...props }) => {
   return (
     <svg
       width="20"

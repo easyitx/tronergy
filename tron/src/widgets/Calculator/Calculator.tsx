@@ -3,11 +3,24 @@ import { cn } from "@/shared/lib/utils";
 import { Checkbox } from "@/shared/ui/Checkbox";
 import { Slider } from "@/shared/ui/Slider";
 import { Typography } from "@/shared/ui/Typography";
-import React, { useState } from "react";
 
-const Calculator = ({ className }: { className?: string }) => {
-  const [transationsCount, setTransationsCount] = useState(1);
-  const [isConfirmed, setIsConfirmed] = useState(false);
+const Calculator = ({
+  className,
+  totalPrice,
+  totalDiscount,
+  isConfirmed,
+  transationsCount,
+  setTransationsCount,
+  setIsConfirmed,
+}: {
+  className?: string;
+  totalPrice: number;
+  totalDiscount: number;
+  isConfirmed: boolean;
+  transationsCount: number;
+  setTransationsCount: (value: number) => void;
+  setIsConfirmed: (value: boolean) => void;
+}) => {
   return (
     <div className={cn("flex gap-4  flex-col", className)}>
       <div className="flex items-center gap-4">
@@ -52,16 +65,19 @@ const Calculator = ({ className }: { className?: string }) => {
           </Typography>
         </Checkbox>
 
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-between items-center">
           <Typography variant="body" className="text-foreground text-base">
             Необходимо отправить:
           </Typography>
-          <Typography
-            variant="body"
-            className="text-primary font-bold text-base"
-          >
-            100 TRX
-          </Typography>
+          <div className="flex items-center gap-2">
+            <span className="line-through opacity-70">{totalDiscount} TRX</span>
+            <Typography
+              variant="body"
+              className="text-primary font-bold text-base"
+            >
+              {totalPrice} TRX
+            </Typography>
+          </div>
         </div>
 
         <div className="w-full flex justify-between">
@@ -70,9 +86,9 @@ const Calculator = ({ className }: { className?: string }) => {
           </Typography>
           <Typography
             variant="body"
-            className="text-foreground font-bold text-base"
+            className="text-foreground  font-bold text-base"
           >
-            100 TRX
+            {totalDiscount - totalPrice} TRX
           </Typography>
         </div>
       </div>

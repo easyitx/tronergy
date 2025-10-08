@@ -1,20 +1,17 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/widgets/Header/Header";
 import { cn } from "@/shared/lib/utils";
 import { interTight } from "@/shared/lib/fonts";
 import Footer from "@/widgets/Footer/Footer";
-import Title from "@/widgets/Title/Title";
 import { Spacing } from "@/shared/ui/Spacing";
 import TronEnergy from "@/widgets/TronEnergy/TronEnergy";
 import { FAQ } from "@/widgets/FAQ/FAQ";
 import { WhyChooseUs } from "@/widgets/WhyChooseUs/WhyChooseUs";
 import { AppProvider } from "./providers";
-import Image from "next/image";
-import bgFilterSvg from "@/shared/assets/images/background-filter.svg";
+import BgFilter from "@/widgets/BgFilter/BgFilter";
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://tronergy.ru"
   ),
@@ -38,32 +35,27 @@ export const metadata = {
     description: "Быстрое пополнение энергии TRON",
     images: ["/og.png"],
   },
-  viewport: { width: "device-width", initialScale: 1, maximumScale: 5 },
-  themeColor: "#0b0b0b",
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0b0b0b",
+};
+
+export default function RootLayout({}: { children: React.ReactNode }) {
   return (
     <html lang="ru">
-      <body className={cn("pt-6 m-0", interTight.variable)}>
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[65vh]">
-          <Image
-            src={bgFilterSvg}
-            alt=""
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
+      <body
+        suppressHydrationWarning
+        className={cn("pt-6 m-0", interTight.variable)}
+      >
+        <BgFilter />
         <AppProvider>
           <Header className="app-container h-15" />
           <Spacing size="4xl" direction="vertical" />
-
           <TronEnergy className="app-container" />
           <Spacing size="4xl" direction="vertical" />
           <FAQ className="app-container" />

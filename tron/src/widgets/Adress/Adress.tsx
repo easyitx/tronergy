@@ -4,15 +4,25 @@ import { Typography } from "@/shared/ui/Typography";
 import Image from "next/image";
 import React from "react";
 import image from "@/shared/assets/images/2.5trx.webp";
-const Adress = ({ className }: { className?: string }) => {
+const Adress = ({
+  className,
+  totalPrice,
+}: {
+  className?: string;
+  totalPrice: number;
+}) => {
   return (
     <div className={cn("flex gap-4  h-full flex-col", className)}>
       <div className="flex items-center gap-4">
         <div className="card text-lg text-accent  w-15 h-15  flex items-center justify-center rounded-full">
           2
         </div>
-        <Typography variant="body" className="text-foreground text-lg">
-          Отправить 2.5 TRX
+        <Typography
+          variant="body"
+          className="text-foreground text-lg flex items-center gap-2"
+        >
+          Отправить
+          <span className="text-foreground">{totalPrice} TRX</span>
         </Typography>
       </div>
       <div className=" card p-6  grow  flex flex-col gap-6">
@@ -25,7 +35,7 @@ const Adress = ({ className }: { className?: string }) => {
             alt="QR"
             width={320}
             height={320}
-            quality={100}
+            sizes="(max-width: 768px) 248px, 320px"
             className="h-full w-full rounded-2xl object-contain"
             priority
           />

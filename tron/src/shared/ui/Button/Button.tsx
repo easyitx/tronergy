@@ -33,7 +33,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary: "bg-primary text-accent hover:opacity-90 shadow-sm rounded-xl",
   ghost: "bg-transparent text-foreground hover:bg-[rgba(255,255,255,0.06)]",
   card: "bg-background-card text-foreground hover:bg-background-card-hover border border-[var(--secondary)]",
-  icon: "rounded-full card  p-0 text-foreground hover:bg-primary text-accent",
+  icon: "rounded-full card group p-0 text-foreground hover:bg-primary hover:text-accent",
   banner:
     "text-accent font-medium shadow-lg hover:shadow-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 group relative overflow-hidden",
   glass: "card glass-hover  text-accent  transition-all duration-200 ",

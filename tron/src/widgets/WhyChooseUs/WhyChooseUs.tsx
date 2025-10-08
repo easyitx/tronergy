@@ -60,7 +60,10 @@ export const WhyChooseUs = ({
             <div className="w-16 card h-16 p-2 rounded-full relative border flex items-center justify-center">
               <div className="absolute left-[-1.5rem] md:left-[-2rem] top-1/2 -translate-y-1/2 -ml-3 h-15 w-3  bg-primary shadow-[0_0_20px_rgba(255,94,24,0.8)] tag-trapezoid rotate-180" />
               <Icon
-                name={(item.icon?.name as any) ?? "discount-circle"}
+                name={
+                  (item.icon?.name as Parameters<typeof Icon>[0]["name"]) ??
+                  "discount-circle"
+                }
                 className="text-primary h-full w-auto"
               />
             </div>

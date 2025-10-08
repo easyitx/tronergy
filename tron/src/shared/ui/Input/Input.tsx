@@ -60,15 +60,12 @@ export const Input: React.FC<InputProps> = ({
 
     setInternalValue(newValue);
 
-    const newEvent = {
+    const clonedEvent: React.ChangeEvent<HTMLInputElement> = {
       ...e,
-      target: {
-        ...e.target,
-        value: newValue,
-      },
-    };
+      target: { ...(e.target as HTMLInputElement), value: newValue },
+    } as React.ChangeEvent<HTMLInputElement>;
 
-    onChange?.(newEvent);
+    onChange?.(clonedEvent);
   };
   const classes = cn(
     baseClass,
@@ -90,7 +87,11 @@ export const Input: React.FC<InputProps> = ({
       {iconRight && (
         <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
           {typeof iconRight === "string" ? (
-            <Icon name={iconRight as any} className="text-accent" size={16} />
+            <Icon
+              name={iconRight as Parameters<typeof Icon>[0]["name"]}
+              className="text-accent"
+              size={16}
+            />
           ) : (
             iconRight
           )}

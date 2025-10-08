@@ -2,7 +2,7 @@ import { cn } from "@/shared/lib/utils";
 import React from "react";
 import { Icon } from "@/shared/ui/Icon/Icon";
 import Logo from "@/widgets/Logo/Logo";
-import Navigation from "../Navigation/Navigation";
+
 import Button from "@/shared/ui/Button/Button";
 import { Typography } from "@/shared/ui/Typography";
 
@@ -21,7 +21,6 @@ const Footer = ({ className }: { className?: string }) => {
           <br /> Свяжитесь с нами и мы с радостью обсудим ваши потребности.
         </Typography>
 
-        {/* Social Media Icons */}
         <div className="flex gap-4">
           <Button variant="icon" size="lg">
             <Icon name="telegram" size={20} />

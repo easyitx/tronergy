@@ -4,7 +4,7 @@ interface PlusIconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
 }
 
-export const PlusIcon: React.FC<PlusIconProps> = ({ size = 24, ...props }) => {
+export const PlusIcon: React.FC<PlusIconProps> = ({ ...props }) => {
   return (
     <svg
       width="24"

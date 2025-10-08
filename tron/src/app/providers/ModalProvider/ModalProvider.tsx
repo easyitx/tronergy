@@ -8,10 +8,10 @@ import React, {
 } from "react";
 import { Modal } from "@/shared/ui/Modal";
 
-export interface ModalConfig {
+export interface ModalConfig<P = Record<string, unknown>> {
   id: string;
-  component: React.ComponentType<any> | ReactNode;
-  props?: Record<string, any>;
+  component: React.ComponentType<P> | ReactNode;
+  props?: P;
   size?: "sm" | "md" | "lg" | "xl" | "full";
   closeOnOverlayClick?: boolean;
   showCloseButton?: boolean;
@@ -21,11 +21,14 @@ export interface ModalConfig {
 
 export interface ModalState {
   isOpen: boolean;
-  config: ModalConfig | null;
+  config: ModalConfig<Record<string, unknown>> | null;
 }
 
 export interface ModalContextType {
-  openModal: (config: Omit<ModalConfig, "id"> & { id?: string }) => string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  openModal: <P = any>(
+    config: Omit<ModalConfig<P>, "id"> & { id?: string }
+  ) => string;
   closeModal: (id: string) => void;
   closeAllModals: () => void;
   isModalOpen: (id: string) => boolean;
@@ -43,7 +46,12 @@ export const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
   const [modals, setModals] = useState<Record<string, ModalState>>({});
 
   const openModal = useCallback(
-    (config: Omit<ModalConfig, "id"> & { id?: string }): string => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    <P = any,>(
+      config: Omit<ModalConfig<P>, "id"> & {
+        id?: string;
+      }
+    ): string => {
       const id =
         config.id ||
         `modal-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
@@ -55,7 +63,7 @@ export const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
           config: {
             id,
             ...config,
-          },
+          } as ModalConfig<Record<string, unknown>>,
         },
       }));
 
