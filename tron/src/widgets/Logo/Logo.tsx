@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Logo() {
   return (
     <Image
-      src="/Logo.svg"
+      src="/logo.svg"
       alt="Tron logo mark"
       width={155}
       height={34}
