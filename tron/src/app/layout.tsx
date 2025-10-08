@@ -11,6 +11,8 @@ import TronEnergy from "@/widgets/TronEnergy/TronEnergy";
 import { FAQ } from "@/widgets/FAQ/FAQ";
 import { WhyChooseUs } from "@/widgets/WhyChooseUs/WhyChooseUs";
 import { AppProvider } from "./providers";
+import Image from "next/image";
+import bgFilterSvg from "@/shared/assets/images/background-filter.svg";
 
 export const metadata = {
   metadataBase: new URL(
@@ -49,6 +51,15 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={cn("pt-6 m-0", interTight.variable)}>
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[65vh]">
+          <Image
+            src={bgFilterSvg}
+            alt=""
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
         <AppProvider>
           <Header className="app-container h-15" />
           <Spacing size="4xl" direction="vertical" />

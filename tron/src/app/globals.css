@@ -17,7 +17,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgba(7, 7, 7, 1);
+    --background: #050505;
 
     --background-card: rgba(46, 46, 46, 1);
     --background-card-hover: rgba(26, 26, 26, 1);
@@ -25,6 +25,7 @@
     --secondary: rgba(46, 46, 46, 1);
     --foreground-secondary: rgb(70, 69, 69);
     --primary: rgba(255, 94, 24, 1);
+    --background-icon: rgba(255, 94, 24, 1);
     --foreground: rgba(153, 153, 153, 1);
     --accent: rgba(255, 255, 255, 1);
     --success: rgba(95, 255, 87, 1);
