@@ -13,7 +13,7 @@ type WhyChooseUsItem = {
 
 const defaultItems: WhyChooseUsItem[] = [
   {
-    title: "Низкая комиссия",
+    title: "Лучшие цены",
     subtitle: "Предлагаем конкурентные условия на рынке",
     icon: { name: "discount-circle" },
   },

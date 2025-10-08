@@ -25,10 +25,14 @@ interface TronEnergyProps {
 }
 
 const TronEnergy = ({ className }: TronEnergyProps) => {
-    const TRX_PRICE = 2.5;
-    const TRX_DISCOUNT = 14;
+    const BASE_TRX_PRICE = 2.5;
+    const BASE_TRX_DISCOUNT = 14;
     const [transationsCount, setTransationsCount] = useState(1);
     const [isConfirmed, setIsConfirmed] = useState(false);
+
+    // Увеличиваем цену и скидку вдвое если isConfirmed
+    const TRX_PRICE = isConfirmed ? BASE_TRX_PRICE * 2 : BASE_TRX_PRICE;
+    const TRX_DISCOUNT = isConfirmed ? BASE_TRX_DISCOUNT * 2 : BASE_TRX_DISCOUNT;
     const totalPrice = TRX_PRICE * transationsCount;
     const totalDiscount = TRX_DISCOUNT * transationsCount;
 
@@ -55,7 +59,7 @@ const TronEnergy = ({ className }: TronEnergyProps) => {
                         variant="h1"
                         className="text-accent text-2xl font-medium"
                     >
-                        Купить энергию TRON
+                        Аренда энергии TRON
                     </Typography>
                     <Typography
                         variant="h2"

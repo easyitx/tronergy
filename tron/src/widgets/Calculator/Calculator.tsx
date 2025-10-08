@@ -88,7 +88,7 @@ const Calculator = ({
             variant="body"
             className="text-foreground  font-bold text-base"
           >
-            {totalDiscount - totalPrice} TRX
+            {totalDiscount} TRX
           </Typography>
         </div>
       </div>
