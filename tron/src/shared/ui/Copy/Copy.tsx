@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "@/shared/ui/Button/Button";
 import { Icon } from "@/shared/ui/Icon/Icon";
 import { cn } from "@/shared/lib/utils";
@@ -23,21 +23,31 @@ export default function Copy({
   iconSize = 28,
 }: CopyProps) {
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<number | null>(null);
+
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(value);
       setCopied(true);
       onCopied?.();
-      window.setTimeout(() => setCopied(false), 1200);
+      if (timerRef.current) window.clearTimeout(timerRef.current);
+      timerRef.current = window.setTimeout(() => setCopied(false), 2000);
     } catch (_) {}
   };
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) window.clearTimeout(timerRef.current);
+    };
+  }, []);
 
   return (
     <button
       className={cn(
-        "relative w-full cursor-pointer card glassflex rounded-md   px-2  h-15 items-center gap-2",
+        "relative w-full cursor-pointer card glassflex rounded-md  glass-hover  px-2  h-15 items-center gap-2",
         className
       )}
+      onClick={handleCopy}
     >
       <Typography
         variant="body"
@@ -52,7 +62,16 @@ export default function Copy({
       </Typography>
 
       <div className="absolute bg-accent  rounded-md p-2 right-2 top-1/2 -translate-y-1/2">
-        {<Icon name="copy" size={iconSize} className=" text-background " />}
+        {
+          <Icon
+            name={copied ? "ticket-circle" : "copy"}
+            size={iconSize}
+            className={cn(
+              "text-background transition-transform duration-200",
+              copied && "scale-110"
+            )}
+          />
+        }
       </div>
     </button>
   );
