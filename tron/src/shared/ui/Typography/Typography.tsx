@@ -31,6 +31,7 @@ interface TypographyProps {
   color?: TypographyColor;
   className?: string;
   children: React.ReactNode;
+  style?: React.CSSProperties;
   as?: keyof JSX.IntrinsicElements;
 }
 
@@ -83,6 +84,7 @@ export const Typography: React.FC<TypographyProps> = ({
   className,
   children,
   as,
+  style,
   ...props
 }) => {
   const Component = as || defaultElements[variant];
@@ -90,7 +92,7 @@ export const Typography: React.FC<TypographyProps> = ({
   const classes = cn(variantClasses[variant], colorClasses[color], className);
 
   return (
-    <Component className={classes} {...props}>
+    <Component className={classes} style={style} {...props}>
       {children}
     </Component>
   );

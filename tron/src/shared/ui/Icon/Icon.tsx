@@ -11,6 +11,10 @@ import {
   CopyIcon,
   PlusIcon,
   TicketCircleIcon,
+  CloseIcon,
+  MenuIcon,
+  TradeIcon,
+  HeadphoneIcon,
 } from "./model/Icons";
 
 interface IconProps
@@ -21,18 +25,19 @@ interface IconProps
 
 const iconComponents: Record<IconName, unknown> = {
   "discount-circle": DiscountCircleIcon,
-
+  menu: MenuIcon,
   "arrow-down": ArrowDownIcon,
   "arrow-up": ArrowUpIcon,
-
+  trade: TradeIcon,
   flash: FlashIcon,
-
+  headphone: HeadphoneIcon,
   telegram: TelegramIcon,
 
   "vk-icon": VkIcon,
   copy: CopyIcon,
   plus: PlusIcon,
   "ticket-circle": TicketCircleIcon,
+  close: CloseIcon,
 };
 
 export const Icon: React.FC<IconProps> = ({

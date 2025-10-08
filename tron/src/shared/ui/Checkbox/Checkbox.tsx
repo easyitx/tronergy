@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { cn } from "@/shared/lib/utils";
@@ -43,8 +44,12 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 
       {children && (
         <label
+          onClick={() => {
+            if (disabled) return;
+            onCheckedChange?.(!checked);
+          }}
           htmlFor={id}
-          className="text-foreground-secondary text-md leading-relaxed cursor-pointer"
+          className=" leading-relaxed cursor-pointer "
         >
           {children}
         </label>
